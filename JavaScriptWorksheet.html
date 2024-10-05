@@ -1,0 +1,98 @@
+<!-- javascript EXTRA CREDIT WORKSHEET -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Assignment</title>
+</head>
+
+<body>
+    <h1>JavaScript Worksheet</h1>
+
+<script>
+function problem1(){
+    let output = "";
+    for (let n = 40; n >= 10; n -= 2) {
+        output += n + " ";
+    }
+    alert(output);
+}
+
+function problem2(){
+    let sum = 0;
+    while (sum <= 20) {
+        let number = parseInt(prompt("Enter a number:"));
+        sum += number; 
+        alert("Sum: " + sum);
+    }
+    if (sum > 20){
+        alert("Sum exceeds 20"); 
+    }
+}
+
+function problem3(){
+    let sum = 0;
+    let numbers = [];
+    while (sum <= 20) {
+        let num = parseInt(prompt("Enter a number:"));
+        sum += num;
+        numbers.push(num);
+    }
+    alert("Numbers entered: " + numbers.join(", "));
+}
+
+function problem4(){
+    let songs = {
+        "Ojitos Lindos": "Bad Bunny",
+        "La Casa": "Caramelos De Cianuro",
+        "Healing": "Drake",
+        "Feriado": "Rawayana",
+        "La flaca": "Jarabe De Palo"
+};
+            
+    let output = "";
+    for (let song in songs) {
+        output += song + " by " + songs[song] + "\n";
+    }
+    alert(output);
+}
+
+function problem5(){
+    let songs = {
+        "Ojitos Lindos": "Bad Bunny",
+        "La Casa": "Caramelos De Cianuro",
+        "Healing": "Drake",
+        "Feriado": "Rawayana",
+        "La flaca": "Jarabe De Palo"
+    };
+            
+    let band = prompt("Enter the name of a band:");
+    let output = "";
+    for (let song in songs) {
+        if (songs[song].toLowerCase() === band.toLowerCase()) {
+            output += song + " by " + songs[song] + "\n";
+        }
+    }
+
+    if (output === "") {
+        alert("No songs found");
+    } else {
+        alert(output);
+    }
+}
+function runProblems() {
+    problem1();
+    problem2();
+    problem3();
+    problem4();
+    problem5();
+}
+
+</script>
+    <input type='button' value="Problem 1" onclick="problem1()">
+    <input type='button' value="Problem 2" onclick="problem2()">
+    <input type='button' value="Problem 3" onclick="problem3()">
+    <input type='button' value="Problem 4" onclick="problem4()">
+    <input type='button' value="Problem 5" onclick="problem5()">
+</body>
+</html>
